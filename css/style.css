@@ -1,0 +1,72 @@
+.title {
+    font-size: 30px;
+    font-family: sans-serif, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.position-absolute {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en nuevas líneas cuando sea necesario */
+    justify-content: space-between; /* Opcional: distribuye el espacio entre los elementos */
+    gap: 0px; /* Espacio entre los elementos */
+}
+
+.div1, .div3, .div4 {
+    box-sizing: border-box;
+    border: 3px solid black;
+    background-color: rgb(180, 175, 175);
+    padding: 10px;
+    margin: 5px;
+    position: relative;
+}
+
+.div2 {
+    padding: 10px;
+    width: 100px;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 100;
+    border: 3px solid black;
+}
+
+p {
+    margin-top: 40px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* Medias query para tamaños de pantallas grandes */
+@media(min-width: 992px) {
+    .div1, .div3, .div4 {
+        width: 32%; /* Cada div ocupa un 33% de la línea */
+    }
+}
+
+/* Medias query para tamaños de pantallas medianas */
+@media(max-width: 991px) and (min-width: 768px) {
+    .div1 {
+        width: 48%; /* Las dos primeras divs ocupan el 48% */
+    }
+
+    .div4 {
+        width: 48%; /* Las dos primeras divs ocupan el 48% */
+    }
+
+    .div3 {
+        width: 100%; /* La tercera div ocupa toda la línea */
+        margin-top: 10px; /* Separación entre las filas */
+    }
+}
+
+/* Medias query para pantallas pequeñas */
+@media(max-width: 767px) {
+    .div1, .div3, .div4 {
+        width: 100%; /* Cada div ocupa el 100% de la línea */
+    }
+}
